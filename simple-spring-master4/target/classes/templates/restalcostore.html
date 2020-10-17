@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AlcoStore</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<!--funkcja onload() uruchamia się po załadowaniu całego bieżącego dokumentu HTML-->
+<body onload="fillTable(store)">
+<div class="container">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Magazyn ulubionych alkoholi</h1>
+            <p class="lead">Może dodać nowy i zmienić stan magazynu.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h3>Doaj nową pozycję</h3>
+            <form>
+                <div class="form-group">
+                    <label for="alco-name">Nazwa alkoholu</label>
+                    <input class="form-control" type="text" name="alco-name" id="alco-name">
+                </div>
+
+                <div class="form-group">
+                    <label for="alcohol" >Zawartość</label>
+                    <input class="form-control" type="number" name="alcohol" id="alcohol">
+                </div>
+
+                <div class="form-group">
+                    <label for="capacity" >Objętość</label>
+                    <input class="form-control" type="number" name="capacity" id="capacity">
+                </div>
+                div class="form-group">
+                <label for="quantity" >Liczba sztil</label>
+                <input class="form-control" type="number" name="quantity" id="quantity">
+        </div>
+
+                <div class="form-group">
+                    <button class="btn btn-primary" type="button" onclick="addNewAlcohol()">Zapisz</button>
+                </div>
+
+            </form>
+        </div>
+        <div class="col">
+            <h3>Pobranie z magazynu</h3>
+            <form>
+                <input type="text" readonly id="taken-alco-name">
+                <input type="hidden" id="taken-alco-id">
+                <input type="number" id="taken-alco-quantity">
+                <input type="text" id="taken-alco-user">
+                <button type="button" onclick="registerTake()">Pobierz</button>
+            </form>
+        </div>
+        <div class="col">
+            <h3>Przyjęcie do magazynu</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h3>Lista stanu magazynowego</h3>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>
+                      Nazwa
+                    </th>
+                    <th>
+                      Zawartość
+                    </th>
+                    <th>
+                      Pojemność
+                    </th>
+                    <th>
+                      Liczba sztuk
+                    </th>
+                    <th>
+                        Operacja
+                    </th>
+                </tr>
+                </thead>
+                <tbody id="alco-rows">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="../static/restalcosrcipt.js" rel="script"></script>
+</body>
+</html>

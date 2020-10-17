@@ -1,0 +1,10 @@
+
+    /**
+     * Kopiowanie znak po znaku (char-c)
+     *
+     * @param reader
+     * @param writer
+     * @throws IOException
+     */
+    private static void copy(Reader reader, Writer writer) throws IOException {
+        int c; // char czyli znak

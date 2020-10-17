@@ -1,0 +1,140 @@
+html{
+    font-size: 16px;
+}
+@media screen and (max-width: 600px){
+    body{
+        margin: 0 40px;
+    }
+}
+@media screen and (min-width: 600px){
+body{
+    color: darkgreen;
+    margin: 100px 200px 0px 200px;
+    font-family: 'Lato', sans-serif;
+}
+}
+
+h1{
+    font-weight: bolder;
+}
+
+h2{
+    font-weight: normal;
+}
+
+h3{
+    font-weight: lighter;
+}
+
+header{
+    background-color: darkseagreen;
+    padding: 5px;
+}
+
+p{
+    color: blue;
+    text-indent: 4rem;
+    text-align: justify;
+}
+/*styl klasy*/
+.error{
+    color: red;
+}
+
+/*styl identyfikatora*/
+#paragraph{
+    color: coral;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:active{
+  color: chartreuse;
+}
+a:link{
+    color: black;
+}
+a:visited{
+    color: coral;
+}
+
+a:hover{
+    background-color: aqua;
+}
+
+h1::after{
+    content: "!!!";
+}
+
+.square{
+    height: 100px;
+    width: 100px;
+}
+
+.my-color{
+    background-color: #F00;
+}
+
+.my-with-opacity-color{
+    background-color: rgba(100, 200, 100, 0.5);
+}
+
+.my-hsl-color{
+    background-color: hsl(120, 100%, 50%);
+}
+
+.size-big{
+    font-size: 2rem;
+}
+.size-mid{
+    font-size: 1.5rem;
+}
+.size-small{
+    font-size: 0.75rem;
+}
+
+span{
+    height: 5rem;
+    color: chartreuse;
+}
+
+span.span-with-height{
+    display: inline-block;
+}
+
+.hide{
+    display: none;
+}
+
+.center{
+    margin:0 auto;
+}
+
+.narrow{
+    position: relative;
+    top: 2rem;
+    left: 2rem;
+    width: 20rem;
+    height: 20rem;
+}
+
+.small-square{
+    position: absolute;
+    top: 5rem;
+    left: 5rem;
+    width: 10rem;
+    height: 10rem;
+}
+
+.fixed{
+    position: fixed;
+    top:2rem;
+    letf:2rem;
+}
+
+.sticky{
+    position: sticky;
+}
+
